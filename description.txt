@@ -1,0 +1,14 @@
+A basic Facebook integration plugin.
+
+It requires a Facebook Application ID to function
+
+filters for facebook:type[:width]
+
+types are:
+likeus = like us (requires the 'Your Facebook page ID' option )
+likeus-s = like us page with streaming feed (requires the 'Your Facebook page ID' option )
+likeus-f = like us with friend images (requires the 'Your Facebook page ID' option )
+likeus-sf = like us page with streaming feed and friend images (requires the 'Your Facebook page ID' option )
+like = like this page
+likesend = like this page with send to friend button
+comment = facebook comment posts
