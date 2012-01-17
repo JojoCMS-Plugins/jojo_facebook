@@ -1,8 +1,8 @@
 <div class="facebook">
 {if $fbtype=='like'}
-    <fb:like layout="standard" colorscheme="{$fbcolorscheme}"{if $fbwidth} width="{$fbwidth}"{/if}></fb:like>
+    <fb:like layout="{if $fblayout}{$fblayout}{else}standard{/if}" colorscheme="{$fbcolorscheme}" show_faces="false"{if $fburl} href="{$fburl}"{/if}{if $fbwidth} width="{$fbwidth}"{/if}></fb:like>
 {elseif $fbtype=='likesend'}
-    <fb:like layout="standard" send="true" colorscheme="{$fbcolorscheme}"{if $fbwidth} width="{$fbwidth}"{/if}></fb:like>
+    <fb:like layout="{if $fblayout}{$fblayout}{else}standard{/if}" send="true" colorscheme="{$fbcolorscheme}" show_faces="false"{if $fburl} href="{$fburl}"{/if}{if $fbwidth} width="{$fbwidth}"{/if}></fb:like>
 {elseif $fbtype=='likeus'}
     <fb:like-box profile_id="{$fbpageid}" stream="false" show_faces= "false" header="false" colorscheme="{$fbcolorscheme}"{if $fbwidth} width="{$fbwidth}"{/if}></fb:like-box>
 {elseif $fbtype=='likeus-f'}

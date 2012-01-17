@@ -38,6 +38,8 @@ class Jojo_Plugin_jojo_facebook extends Jojo_Plugin
                 $bits = explode(':', $type);
                 $type = $bits[0];
                 $smarty->assign('fbwidth', (isset($bits[1])? $bits[1] : '' ));
+                $smarty->assign('fblayout', (isset($bits[2])? $bits[2] : '' ));
+                $smarty->assign('fburl', (isset($bits[3])? $bits[3] : '' ));
             }
             $smarty->assign('fbtype', $type);
             $html = $smarty->fetch('jojo_facebook.tpl');
