@@ -22,11 +22,11 @@ class Jojo_Plugin_jojo_facebook extends Jojo_Plugin
 
      public static function facebook($content)
     {
-    
+
         if (strpos($content, '[[facebook:') === false) {
             return $content;
         }
-        
+
         global $smarty, $page;
         $smarty->assign('fbcolorscheme', Jojo::getOption('facebook_colorscheme'));
         $smarty->assign('fbpage', Jojo::getOption('facebook_link'));
@@ -39,7 +39,7 @@ class Jojo_Plugin_jojo_facebook extends Jojo_Plugin
                 $type = $bits[0];
                 $smarty->assign('fbwidth', (isset($bits[1])? $bits[1] : '' ));
                 $smarty->assign('fblayout', (isset($bits[2])? $bits[2] : '' ));
-                $smarty->assign('fburl', (isset($bits[3])? $bits[3] : '' ));
+                $smarty->assign('fburl', (isset($bits[3])? urldecode($bits[3]) : '' ));
             }
             $smarty->assign('fbtype', $type);
             $html = $smarty->fetch('jojo_facebook.tpl');
